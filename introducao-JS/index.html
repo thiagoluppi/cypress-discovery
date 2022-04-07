@@ -1,17 +1,19 @@
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cypress Discovery</title>
 </head>
+
 <body>
   <!-- <h1>Olá, <span id="nome"></span></h1> -->
 
   <h1>CNH</h1>
 
-  <input name="nome" placeholder="Nome" />
-  <input name="idade" placeholder="Idade" />
+  <input type="text" name="nome" placeholder="Nome" />
+  <input type="number" name="idade" placeholder="Idade" />
   <button type="button" onclick="verificaIdade()">Verificar Idade</button>
 
   <script type="text/javascript">
@@ -20,9 +22,18 @@
       var nome = document.querySelector('input[name=nome]')
       var idade = document.querySelector('input[name=idade]')
 
-      console.log(nome.value)
-      console.log(idade.value)
+      var idadeNum = parseInt(idade.value)     
+
+      if (idadeNum >= 18) {
+        alert('Você pode tirar sua carteira de motorista!')
+      } else if (idadeNum > 4){
+        alert('Você é menor de idade, melhor andar de bicicleta!')
+      } else {
+        alert('Melhor você andar de motoca!')
+      }
     }
+
+
 
 
 
@@ -38,6 +49,7 @@
     // console.log(idade);
     // console.log(typeof idade);
     // document.getElementById("nome").innerText = nome;
-  </script>  
+  </script>
 </body>
+
 </html>
