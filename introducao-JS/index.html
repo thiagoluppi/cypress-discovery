@@ -16,7 +16,30 @@
   <input type="number" name="idade" placeholder="Idade" />
   <button type="button" onclick="verificaIdade()">Verificar Idade</button>
 
+
+  <h1>Vingadores</h1>
+
+  <button type="button" onclick="listaVingadores()">Listar Vingadores</button>
+
+  <ul id="avengers">    
+  </ul>
+
   <script type="text/javascript">
+
+    var avengers = ['Tony Stark', 'Clint Barton', 'Natasha Romanoff', 'Steve Rogers']
+
+    function listaVingadores() {
+      var ul = document.getElementById('avengers')
+      ul.innerHTML = ''
+
+      avengers.forEach(function(a){
+        var li = document.createElement('li')
+        var text = document.createTextNode(a)
+        li.appendChild(text)
+        ul.appendChild(li)
+        // console.log(a)
+      })
+    }
 
     function verificaIdade() {
       var nome = document.querySelector('input[name=nome]')
