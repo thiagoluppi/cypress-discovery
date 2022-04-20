@@ -1,8 +1,8 @@
 
 // describe é a nossa suite de teste
 // '()=>' é uma arrow function
-describe('home page', ()=>{
-  it('app deve estar online', ()=>{
+describe('home page', () => {
+  it('app deve estar online', () => {
     // cy. é o comando do cypress para acessar a API do cypress e ter acesso aos recursos do framework:
     cy.viewport(1440, 900)
     cy.visit('https://buger-eats.vercel.app')
