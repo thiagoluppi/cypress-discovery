@@ -1,0 +1,9 @@
+Para subir o cypress no terminal:
+
+npm run test
+
+ou
+
+npx cypress open
+
+o primeiro comando vai rodar o segundo.
