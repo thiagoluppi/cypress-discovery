@@ -51,6 +51,7 @@ describe('Cadastro', () => {
     cy.get('input[name="district"]').should('have.value', entregador.endereco.bairro)
     cy.get('input[name="city-uf"]').should('have.value', entregador.endereco.cidade_uf)
 
+    // o método contains pode juntar um seletor css com o texto
     cy.contains('.delivery-method li', entregador.metodo_entrega).click()
   })
 })
